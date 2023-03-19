@@ -44,7 +44,6 @@ img {
   margin: 100px auto;
 }
 
-
 /* header */
 .header {
   display: flex;
@@ -92,8 +91,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 24px;
-
-  margin: 0 auto;
 }
 
 /* 짝수번째 카드 역순 */
@@ -112,6 +109,10 @@ img {
   flex-basis: 26%;
   flex-grow: 1;
   flex-shrink: 0;
+}
+
+.card-img img {
+  width: 100%;
 }
 
 .card-img::before {
