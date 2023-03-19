@@ -157,15 +157,24 @@ img {
   margin-bottom: 32px;
 }
 
-.card-text li {
-  list-style: inside;
+.card-text ul li {
   font-size: var(--normal-font-size);
+  position: relative;
+  padding-left: 20px;
+}
+
+.card-text ul li::before {
+  content: "";
+  background-color: var(--sub-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .card-text li:not(:last-child) {
   margin-bottom: 10px;
-}
-
-.card-text li::marker {
-  color: var(--sub-color);
 }
