@@ -17,6 +17,7 @@
 
 body {
   background-color: var(--main-color);
+  cursor: default;
 }
 
 /* reset */
@@ -55,6 +56,8 @@ img {
   flex-basis: 280px;
   flex-shrink: 0;
   flex-grow: 0;
+  transition: all ease-in 0.3s;
+  position: relative;
 }
 
 .header h1,
@@ -102,6 +105,11 @@ img {
 .card {
   display: flex;
   position: relative;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translate(-5px, -5px);
 }
 
 .card-img {
