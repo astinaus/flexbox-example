@@ -56,7 +56,6 @@ img {
   flex-basis: 280px;
   flex-shrink: 0;
   flex-grow: 0;
-  transition: all ease-in 0.3s;
   position: relative;
 }
 
@@ -96,8 +95,12 @@ img {
   gap: 24px;
 }
 
+.main ul li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 /* 짝수번째 카드 역순 */
-.main article:nth-child(2n) > .card {
+.main ul li:nth-child(2n) > .card {
   flex-direction: row-reverse;
 }
 
@@ -153,25 +156,25 @@ img {
   content: "Scrap";
 }
 
-.card-text {
+.card .card-text {
   flex-basis: 74%;
   padding: 24px;
   background-color: #fff;
 }
 
-.card-text h2 {
+.card .card-text h2 {
   font-size: var(--h2-font-size);
   color: var(--main-color);
   margin-bottom: 32px;
 }
 
-.card-text ul li {
+.card .card-text ul li {
   font-size: var(--normal-font-size);
   position: relative;
   padding-left: 20px;
 }
 
-.card-text ul li::before {
+.card .card-text ul li::before {
   content: "";
   background-color: var(--sub-color);
   width: 10px;
@@ -183,6 +186,6 @@ img {
   transform: translateY(-50%);
 }
 
-.card-text li:not(:last-child) {
+.card .card-text li:not(:last-child) {
   margin-bottom: 10px;
 }
