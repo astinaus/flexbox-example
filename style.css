@@ -41,7 +41,7 @@ img {
 
 /* layout */
 .l_wrapper {
-  width: 1080px;
+  max-width: 1080px;
   margin: 100px auto;
 }
 
@@ -53,8 +53,8 @@ img {
 }
 
 .header h1 {
-  flex-basis: 280px;
-  flex-shrink: 0;
+  max-width: 280px;
+  flex-shrink: 1;
   flex-grow: 0;
   position: relative;
 }
@@ -83,25 +83,28 @@ img {
 .header p {
   font-size: var(--normal-font-size);
   color: var(--sub-color);
-  flex-basis: 450px;
-  flex-shrink: 0;
+  max-width: 450px;
+  flex-shrink: 1;
 }
 
 /* main */
 .main {
   margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
 }
 
-.main ul li:not(:last-child) {
+.card-list li:not(:last-child) {
   margin-bottom: 24px;
 }
 
 /* 짝수번째 카드 역순 */
-.main ul li:nth-child(2n) > .card {
+.card-list li:nth-child(2n) > .card {
   flex-direction: row-reverse;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
 }
 
 /* 카드 */
@@ -124,6 +127,8 @@ img {
 
 .card-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-img::before {
@@ -132,7 +137,8 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
-  opacity: 0.5;
+  opacity: 0.4;
+  max-width: 100%;
 }
 
 .card-img::after {
@@ -188,4 +194,22 @@ img {
 
 .card .card-text li:not(:last-child) {
   margin-bottom: 10px;
+}
+
+/* media query */
+@media (max-width: 840px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  .header h1::after {
+    width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .card-list li:nth-child(2n) > .card, .card {
+    flex-direction: column;
+  }
 }
