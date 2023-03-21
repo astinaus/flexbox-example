@@ -57,6 +57,7 @@ img {
   flex-shrink: 1;
   flex-grow: 0;
   position: relative;
+  margin-top: -10px;
 }
 
 .header h1,
