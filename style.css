@@ -46,6 +46,7 @@ img {
 }
 
 /* header */
+/* 상단 여백을 메꾸기 위해 h1, p에 margin-top: -10px; (nagative margin) 추가 */
 .header {
   display: flex;
   align-items: center;
