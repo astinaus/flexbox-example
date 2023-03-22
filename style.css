@@ -124,7 +124,6 @@ img {
 .card-img {
   position: relative;
   flex-basis: 26%;
-  flex-grow: 1;
   flex-shrink: 0;
 }
 
@@ -166,7 +165,6 @@ img {
 }
 
 .card .card-text {
-  flex-basis: 0;
   flex-grow: 1;
   padding: 24px;
   background-color: #fff;
