@@ -190,9 +190,8 @@ img {
   height: 10px;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: 5px;
   left: 0;
-  transform: translateY(-50%);
 }
 
 .card .card-text li:not(:last-child) {
